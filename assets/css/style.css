@@ -86,7 +86,7 @@ background: linear-gradient(to bottom,  hotpink 0%,  purple 100%);
 #addGifContainer{
 	min-height: 500px;
 	background-color: transparent;
-	background-image: url('../images/Panda.png');
+	background-image: url('../images/pandagif.gif');
 	background-position: bottom;
 	background-size: 100%;
 	background-repeat: no-repeat;	
@@ -156,11 +156,23 @@ border-radius: 10px;
 .picDiv{
 	display: inline-block;
 	margin:10px;
-	width:auto;
+	width:30%;
+	text-align: center;
 
 }
 
 .picDiv img{
+	width: 100%;
 	box-shadow: 3px 3px 5px black;
 	border-radius: 5px;
+}
+
+.picDiv p{
+	color: hotpink;
+	padding: 10px;
+}
+
+.picDiv img:hover{
+ border: hotpink 2px solid;
+
 }

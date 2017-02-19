@@ -55,9 +55,9 @@ var myProject={
 				var p= $("<p>");
 				p.text("Rated: "+results[i].rating);
 				var picture= $("<img>");
-				picture.attr("src", results[i].images.fixed_height_small_still.url);
-				picture.attr("data-still", results[i].images.fixed_height_small_still.url);
-				picture.attr("data-animate", results[i].images.fixed_height_small.url);
+				picture.attr("src", results[i].images.original_still.url);
+				picture.attr("data-still", results[i].images.original_still.url);
+				picture.attr("data-animate", results[i].images.original.url);
 				picture.attr("data-state", "still");
 				picture.addClass("pic");
 				newDiv.append(picture);
