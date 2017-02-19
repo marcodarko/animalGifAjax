@@ -15,19 +15,25 @@
 
 body{
 	background-color: transparent;
+	padding: 20px;
 }
 
 html{
 height: 150%;
 background: #b5f4ef; /* Old browsers */
-background: -moz-linear-gradient(top,  grey 0%,  black 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  grey 0%, black 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  grey 0%, black 100%);
+background: -moz-linear-gradient(top,  white 0%,  lightyellow 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  white 0%, lightyellow 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  white 0%, lightyellow 100%);
 }
 
 #mainContainer{
 	margin: auto;
-	padding:0;
+	box-shadow: 5px 5px 10px lightblue;
+	padding: 0px;
+	border-radius: 20px;
+	background-color: pink;
+	border: violet 7px solid;
+	
 
 }
 
@@ -36,18 +42,18 @@ background: linear-gradient(to bottom,  grey 0%, black 100%);
 	border-top-left-radius: 20px;
 
 	background-image: url('../images/bk2.jpg');
-	min-height: 200px;
-	min-width: 450px;
+	
 	padding: 20px;
+	border-bottom: 10px violet solid;
 }
 
 #buttonContainer button{
 
 color: white;
-font-family: sans-serif;
+font-family: Arial, sans-serif;
 padding: 10px;
 margin:5px;
-border: none;
+border: hotpink 2px solid;
 border-radius: 7px;
 box-shadow: 3px 4px 5px black;
 
@@ -59,43 +65,82 @@ background: linear-gradient(to bottom,  purple 0%, hotpink 100%);
 
 #buttonContainer button:hover{
 	box-shadow: 1px 1px 3px black;
+	border: lightpink 2px solid;
 
 }
+
 
 
 #gifContainer{
 	background-image: url('../images/bk1.jpg');
-	min-height: 200px;
-	min-width: 450px;
+	min-height: 500px;
+	padding: 0px;
+	border-right: white 4px solid;
 
 }
 
 #addGifContainer{
+	min-height: 500px;
+	background-color: transparent;
+	background-image: url('../images/Panda.png');
+	background-position: bottom;
+	background-size: 100%;
+	background-repeat: no-repeat;	
+	text-align: center;	
 	
-background-color: pink;
-background-image: url('../images/Panda.png');
-background-position: bottom;
-background-size: 50%;
-background-repeat: no-repeat;
-
-	min-height: 200px;
-	min-width: 450px;	
-	text-align: center;
-	font-family: sans-serif;
 
 }
 
 #addGifContainer input{
 	width: 100%;
 	background-color: transparent;
-	color: orange;
-	border: black 2px solid;
-	border-radius: 25px;
-	padding: 15px;
-	font-size: 2.5em;
+	color: purple;
+	border: violet 2px solid;
+	text-align: center;
+	padding: 10px;
+	font-size: 1em;
+	margin:10px 0px;
 
+}
+
+#addGifContainer input:nth-child(2){
+	background-color: lightblue;
+	color: white;
+	border-radius: 25px; 
+	border: none;
+
+}
+
+#submitButton:hover{
+	background-color: lightblue;
+	color:white;
 }
 
 #addGifContainer form{
 	padding: 40px 10px;
+}
+
+#addGifContainer form label{
+padding: 10px;
+background-color: violet;
+border-radius: 10px;
+
+	font-family: sans-serif;
+	color: white;
+	text-shadow: 2px 2px 3px purple;
+
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: white;
+
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: white;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: white;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: white;
 }
