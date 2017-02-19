@@ -1,0 +1,101 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(../images/AnimalTypeFaces.ttf);
+    
+}
+
+#logo{
+	font-family: myFirstFont, sans-seriff;
+	text-align: center;
+	font-size: 10vw;
+	color: hotpink;
+	background-color: transparent;
+	text-shadow: 2px 2px 3px black;
+}
+
+body{
+	background-color: transparent;
+}
+
+html{
+height: 150%;
+background: #b5f4ef; /* Old browsers */
+background: -moz-linear-gradient(top,  grey 0%,  black 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  grey 0%, black 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  grey 0%, black 100%);
+}
+
+#mainContainer{
+	margin: auto;
+	padding:0;
+
+}
+
+#buttonContainer{
+	border-top-right-radius: 20px;
+	border-top-left-radius: 20px;
+
+	background-image: url('../images/bk2.jpg');
+	min-height: 200px;
+	min-width: 450px;
+	padding: 20px;
+}
+
+#buttonContainer button{
+
+color: white;
+font-family: sans-serif;
+padding: 10px;
+margin:5px;
+border: none;
+border-radius: 7px;
+box-shadow: 3px 4px 5px black;
+
+background: -moz-linear-gradient(top,  purple 0%,  hotpink 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  purple 0%, hotpink 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  purple 0%, hotpink 100%);
+
+}
+
+#buttonContainer button:hover{
+	box-shadow: 1px 1px 3px black;
+
+}
+
+
+#gifContainer{
+	background-image: url('../images/bk1.jpg');
+	min-height: 200px;
+	min-width: 450px;
+
+}
+
+#addGifContainer{
+	
+background-color: pink;
+background-image: url('../images/Panda.png');
+background-position: bottom;
+background-size: 50%;
+background-repeat: no-repeat;
+
+	min-height: 200px;
+	min-width: 450px;	
+	text-align: center;
+	font-family: sans-serif;
+
+}
+
+#addGifContainer input{
+	width: 100%;
+	background-color: transparent;
+	color: orange;
+	border: black 2px solid;
+	border-radius: 25px;
+	padding: 15px;
+	font-size: 2.5em;
+
+}
+
+#addGifContainer form{
+	padding: 40px 10px;
+}
