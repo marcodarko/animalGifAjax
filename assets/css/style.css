@@ -8,7 +8,7 @@
 	font-family: myFirstFont, sans-seriff;
 	text-align: center;
 	font-size: 10vw;
-	color: hotpink;
+	color: #00ccff;
 	background-color: transparent;
 	text-shadow: 2px 2px 3px black;
 }
@@ -31,8 +31,8 @@ background: linear-gradient(to bottom,  white 0%, lightyellow 100%);
 	box-shadow: 5px 5px 10px lightblue;
 	padding: 0px;
 	border-radius: 20px;
-	background-color: pink;
-	border: violet 7px solid;
+	background-color: #6633cc;
+	border: #0099ff 7px solid;
 	
 
 }
@@ -41,10 +41,11 @@ background: linear-gradient(to bottom,  white 0%, lightyellow 100%);
 	border-top-right-radius: 20px;
 	border-top-left-radius: 20px;
 
-	background-image: url('../images/bk2.jpg');
+	background-image: url('../images/pixel.gif');
+	background-size: 200px;
 	
 	padding: 20px;
-	border-bottom: 10px violet solid;
+	border-bottom: 10px #00ccff solid;
 }
 
 #buttonContainer button{
@@ -53,19 +54,22 @@ color: white;
 font-family: Arial, sans-serif;
 padding: 10px;
 margin:5px;
-border: hotpink 2px solid;
+border: #000066 2px solid;
 border-radius: 7px;
 box-shadow: 3px 4px 5px black;
 
-background: -moz-linear-gradient(top,  purple 0%,  hotpink 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  purple 0%, hotpink 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  purple 0%, hotpink 100%);
+background: -moz-linear-gradient(top,  #000066 0%,  #00ccff 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #000066 0%,  #00ccff 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #000066 0%,  #00ccff 100%);
 
 }
 
 #buttonContainer button:hover{
 	box-shadow: 1px 1px 3px black;
-	border: lightpink 2px solid;
+	border: #00ccff  2px solid;
+	background: -moz-linear-gradient(top,  hotpink 0%,  purple 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, hotpink 0%,  purple 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  hotpink 0%,  purple 100%);
 
 }
 
@@ -93,9 +97,9 @@ background: linear-gradient(to bottom,  purple 0%, hotpink 100%);
 
 #addGifContainer input{
 	width: 100%;
-	background-color: transparent;
+	background-color: #00ccff;
 	color: purple;
-	border: violet 2px solid;
+	border: #00ccff 2px solid;
 	text-align: center;
 	padding: 10px;
 	font-size: 1em;
@@ -103,8 +107,13 @@ background: linear-gradient(to bottom,  purple 0%, hotpink 100%);
 
 }
 
+#addGifContainer input:active{
+	background-color:violet;
+}
+
 #addGifContainer input:nth-child(2){
-	background-color: lightblue;
+
+	background-color: black;
 	color: white;
 	border-radius: 25px; 
 	border: none;
@@ -122,7 +131,6 @@ background: linear-gradient(to bottom,  purple 0%, hotpink 100%);
 
 #addGifContainer form label{
 padding: 10px;
-background-color: violet;
 border-radius: 10px;
 
 	font-family: sans-serif;
@@ -143,4 +151,16 @@ border-radius: 10px;
 }
 :-moz-placeholder { /* Firefox 18- */
   color: white;
+}
+
+.picDiv{
+	display: inline-block;
+	margin:10px;
+	width:auto;
+
+}
+
+.picDiv img{
+	box-shadow: 3px 3px 5px black;
+	border-radius: 5px;
 }

@@ -2,7 +2,7 @@
 
 var myProject={
 
-	defaultButtons:["Monkey", "Goldfish", "Kitten", "Puppies", "Panda", "Tiger"],
+	defaultButtons:["Monkey", "Goldfish", "Unicorn", "Boston Terrier", "Panda", "Velociraptor"],
 	authKey: "dc6zaTOxFJmzC",
 
 	renderDefaultButtons: function(){
@@ -14,7 +14,17 @@ var myProject={
 			var button= $("<button>");
 			button.attr("data-name",myProject.defaultButtons[i]);
 			button.text(myProject.defaultButtons[i]);
+			// append to HTML
 			$("#buttonContainer").append(button);
+			// tie event listener to each button
+			$(button).on("click", function(event){
+		
+				var UR=$(this).attr("data-name");
+				console.log("Button Clicked: "+UR);
+				myProject.GIFrequest(UR);
+
+			});
+
 		};
 	},
 
@@ -34,19 +44,40 @@ var myProject={
 		$.ajax({
 			url: queryURL,
 			method: "GET"
-		}).done(function (response) {
+		}).done(function(response) {
 			
 			var results= response.data;
 			console.log("AJAX response: "+results);
-			for (var i =0; i < results.lenght; i++) {
-				var picture=$("<img>");
+			var z = results.length;
+			$("#gifContainer").empty();
+			for (var i =0; i < z; i++) {
+				var newDiv= $("<div class='picDiv'>");
+				var p= $("<p>");
+				p.text("Rated: "+results[i].rating);
+				var picture= $("<img>");
 				picture.attr("src", results[i].images.fixed_height_small_still.url);
 				picture.attr("data-still", results[i].images.fixed_height_small_still.url);
 				picture.attr("data-animate", results[i].images.fixed_height_small.url);
 				picture.attr("data-state", "still");
 				picture.addClass("pic");
-				$("#gifContainer").append(picture);
-			}
+				newDiv.append(picture);
+				newDiv.append(p);
+				$("#gifContainer").append(newDiv);
+				// ---------Event handler
+				$(".pic").on("click", function(event){
+					console.log("IMG clicked");
+					var state= $(this).attr("data-state")
+				 	if(state === "still"){
+		                $(this).attr("src", $(this).attr("data-animate"));
+		                $(this).attr("data-state", "animate");
+		              }
+		              else{
+		                $(this).attr("src", $(this).attr("data-still"));
+		                $(this).attr("data-state", "still");
+		              }
+				});
+				// ---------
+			};
 		});
 	}
 
@@ -55,6 +86,7 @@ var myProject={
 
 // _____________________________________
 window.onload = function() {
+
 	myProject.renderDefaultButtons();
 
 	$("#submitButton").on("click", function(event){
@@ -65,23 +97,5 @@ window.onload = function() {
 		myProject.renderUserButton(y);
 	});
 
-	$("#buttonContainer button").on("click", function(event){
-		
-		var UR=$(this).attr("data-name");
-		console.log("Button Clicked: "+UR);
-		myProject.GIFrequest(UR);
-
-	});
-
-	$(".pic").on("click", function(event){
-		 if(state === "still"){
-                $(this).attr("src", $(this).attr("data-animate"));
-                $(this).attr("data-state", "animate");
-              }
-              else{
-                $(this).attr("src", $(this).attr("data-still"));
-                $(this).attr("data-state", "still");
-              }
-	});
 
 };
