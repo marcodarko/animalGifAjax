@@ -39,7 +39,7 @@ var myProject={
 	GIFrequest: function(Userrequest) {
 		var key= myProject.authKey;
 		var word= encodeURI(Userrequest);
-		var queryURL="http://api.giphy.com/v1/gifs/search?q="+word+"&limit=10&fmt=json&rating=pg-13&api_key="+key;
+		var queryURL="https://api.giphy.com/v1/gifs/search?q="+word+"&limit=10&fmt=json&rating=pg-13&api_key="+key;
 		
 		$.ajax({
 			url: queryURL,
